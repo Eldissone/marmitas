@@ -1,0 +1,1 @@
+@keyframes reveal{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}.hero-copy,.hero-media,.topbar{animation:reveal .8s both}.hero-media{animation-delay:.14s}

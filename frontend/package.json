@@ -1,0 +1,7 @@
+{
+  "name": "marmitas-com-amor-frontend",
+  "private": true,
+  "scripts": {
+    "dev": "node ../server.js"
+  }
+}

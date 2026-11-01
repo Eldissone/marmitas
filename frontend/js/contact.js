@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',()=>{const form=document.querySelector('[data-contact-form]');if(!form)return;form.addEventListener('submit',event=>{event.preventDefault();const toast=document.querySelector('.toast');toast.classList.add('is-visible');form.reset();setTimeout(()=>toast.classList.remove('is-visible'),3500)})});

@@ -1,0 +1,11 @@
+{
+  "name": "marmitas-com-amor",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website Marmitas com Amor",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  }
+}

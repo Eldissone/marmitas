@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('[data-action="quote"]').forEach(b=>b.addEventListener('click',()=>{const t=document.querySelector('.toast');t.classList.add('is-visible');setTimeout(()=>t.classList.remove('is-visible'),3000)}))});
