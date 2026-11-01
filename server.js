@@ -17,6 +17,7 @@ http.createServer((req, res) => {
   fs.readFile(file, (error, content) => {
     if (error) return res.writeHead(error.code === 'ENOENT' ? 404 : 500).end(error.code === 'ENOENT' ? 'Página não encontrada' : 'Erro interno');
     res.writeHead(200, { 'Content-Type': types[path.extname(file).toLowerCase()] || 'application/octet-stream' });
-    res.end(content);
+    if (path.extname(file).toLowerCase() !== '.html') return res.end(content);
+    res.end(content.toString('utf8').replace('</body>', '<script src="/js/navigation.js" defer></script></body>'));
   });
 }).listen(port, () => console.log(`Marmitas com Amor em http://localhost:${port}`));
