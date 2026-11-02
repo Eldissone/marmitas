@@ -49,6 +49,19 @@
         gap: 0
     }
 
+    .brand {
+        gap: 7px
+    }
+
+    .brand img {
+        width: 38px;
+        height: 38px
+    }
+
+    .brand__name {
+        font-size: 1.35rem
+    }
+
     .button--dark {
         padding: 0 14px;
         min-height: 42px;

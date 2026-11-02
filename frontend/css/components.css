@@ -14,12 +14,27 @@
 }
 
 .brand {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.80rem;
-    letter-spacing: -.08em
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    width: max-content;
+    line-height: 1
 }
 
-.brand span {
+.brand img {
+    display: block;
+    width: 46px;
+    height: 46px;
+    object-fit: contain
+}
+
+.brand__name {
+    font: 500 clamp(1.35rem, 1.8vw, 1.8rem)/.95 'Playfair Display', serif;
+    letter-spacing: -.08em;
+    white-space: nowrap
+}
+
+.brand__name span {
     color: var(--terra);
     font-style: italic
 }
@@ -512,7 +527,26 @@ h1 em {
     align-items: end;
     gap: 30px;
     padding: 72px max(calc((100% - 1068px)/2), 24px);
-    background: #d9cdb9
+    background: #d9cdb9;
+    position: relative;
+    overflow: hidden
+}
+
+.closing-cta::after {
+    content: '';
+    position: absolute;
+    right: clamp(24px, 7vw, 110px);
+    bottom: -32px;
+    width: clamp(145px, 18vw, 235px);
+    aspect-ratio: 1;
+    background: url('/assets/images/logo.jpeg') center / contain no-repeat;
+    opacity: .10;
+    pointer-events: none
+}
+
+.closing-cta > * {
+    position: relative;
+    z-index: 1
 }
 
 .closing-cta h2 {
