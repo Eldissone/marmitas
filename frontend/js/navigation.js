@@ -17,4 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
     .join('');
 
   header.innerHTML = `<a class="brand" href="/" aria-label="Marmitas com Amor — página inicial"><img src="/assets/images/logo.jpeg" alt=""><span class="brand__name">Marmitas <span>com Amor</span></span></a><nav class="nav" aria-label="Navegação principal">${navigation}</nav><div class="topbar-actions"><a class="button button--dark" href="/contacto.html">Encomendar<span class="arrow">→</span></a></div>`;
+
+  const updateHeaderState = () => header.classList.toggle('is-scrolled', window.scrollY > 12);
+  updateHeaderState();
+  window.addEventListener('scroll', updateHeaderState, { passive: true });
 });

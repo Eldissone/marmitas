@@ -1,14 +1,14 @@
 @media(max-width:900px) {
 
-    .topbar,
     .hero,
     .footer {
         width: calc(100% - 42px)
     }
 
     .topbar {
+        width: 100%;
         grid-template-columns: 1fr auto;
-        padding: 20px 0 45px
+        padding: 14px 21px
     }
 
     .nav {
@@ -39,7 +39,6 @@
 
 @media(max-width:520px) {
 
-    .topbar,
     .hero,
     .footer {
         width: calc(100% - 32px)
@@ -47,6 +46,11 @@
 
     .topbar-actions {
         gap: 0
+    }
+
+    .topbar {
+        width: 100%;
+        padding-inline: 16px
     }
 
     .brand {
